@@ -9,13 +9,9 @@ class ResetPasswordScreen extends StatefulWidget {
 
 class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _inputController = TextEditingController();
 
-  @override
-  void dispose() {
-    _inputController.dispose();
-    super.dispose();
-  }
+
+
 
   void _resetPassword() {
     if (_formKey.currentState?.validate() ?? false) {
@@ -48,7 +44,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               TextFormField(
-                controller: _inputController,
                 decoration: InputDecoration(
                   hintText: 'Enter your email or password',
                   filled: true,
